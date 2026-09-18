@@ -68,8 +68,9 @@ Looking to tweak, customize, mod, or extend AetherWave manually? Full developer 
 - **Recompile:** Run `build.bat` (uses MSVC C++20).
 
 #### 🐧 Linux (Ubuntu / Debian / Arch / Fedora)
-- **Start:** Just run `./run.sh`! *(Auto-compiles automatically on first run, then starts in background)*.
-- **Stop:** Run `./stop.sh`.
+- **Start:** Run `bash run.sh` (or `chmod +x run.sh && ./run.sh`). *(Auto-compiles automatically on first run, then starts in background)*.
+  > ⚠️ **IMPORTANT:** Do **NOT** use `sudo`! Running as root prevents access to your desktop's X11 display and PulseAudio session.
+- **Stop:** Run `bash stop.sh` (or `./stop.sh`).
 - **Install Dependencies (Ubuntu/Debian):**
   ```bash
   sudo apt update && sudo apt install -y cmake g++ libpulse-dev libcairo2-dev libx11-dev libxext-dev
@@ -159,8 +160,9 @@ Looking to tweak, customize, mod, or extend AetherWave manually? Full developer 
 - **Compile Ulang:** Jalankan `build.bat` (menggunakan MSVC C++20).
 
 #### 🐧 Linux (Ubuntu / Debian / Arch / Fedora)
-- **Menjalankan:** Cukup jalankan `./run.sh`! *(Otomatis meng-compile pada run pertama jika binary belum ada, lalu langsung jalan di background)*.
-- **Menghentikan:** Jalankan `./stop.sh`.
+- **Menjalankan:** Cukup jalankan `bash run.sh` (atau `chmod +x run.sh && ./run.sh`). *(Otomatis meng-compile pada run pertama jika binary belum ada, lalu langsung jalan di background)*.
+  > ⚠️ **PENTING:** **JANGAN** gunakan `sudo`! Menjalankan dengan sudo/root akan memblokir akses ke display X11 dan sesi audio PulseAudio desktop kamu.
+- **Menghentikan:** Jalankan `bash stop.sh` (atau `./stop.sh`).
 - **Install Dependensi (Ubuntu/Debian jika dibutuhkan):**
   ```bash
   sudo apt update && sudo apt install -y cmake g++ libpulse-dev libcairo2-dev libx11-dev libxext-dev

@@ -155,7 +155,7 @@ Looking to tweak, customize, mod, or extend AetherWave manually? Full developer 
 ### Cara Menjalankan
 
 #### 🪟 Windows (11 / 10)
-- **Menjalankan:** Double-click `run.bat` (atau `bin\AetherWave.exe`).
+- **Menjalankan:** Ke folder **Bin** terus Double-click file `run.bat` (atau `bin\AetherWave.exe`).
 - **Menghentikan:** Double-click `stop.bat` atau klik kanan icon tray -> "Exit AetherWave".
 - **Compile Ulang:** Jalankan `build.bat` (menggunakan MSVC C++20).
 

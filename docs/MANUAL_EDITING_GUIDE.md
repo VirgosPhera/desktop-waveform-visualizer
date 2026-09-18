@@ -322,9 +322,11 @@ AppendMenuW(hMenu, MF_STRING, 104, L"Mode: My New Mode");
    ```
 2. Simply run the launcher:
    ```bash
-   ./run.sh
+   bash run.sh
+   # or: chmod +x run.sh stop.sh && ./run.sh
    ```
-   *(On first run, `run.sh` automatically detects if the binary is missing, compiles it with CMake using all CPU cores, and launches AetherWave in the background. Subsequent runs start instantly!)*
+   *(On first run, `run.sh` automatically detects if the binary is missing, compiles it with CMake using all CPU cores, and launches AetherWave in the background. Subsequent runs start instantly!)*  
+   > ⚠️ **DO NOT run with `sudo`!** Desktop graphical and audio applications must run as your normal user account so they can connect to your X11 display and PulseAudio/PipeWire audio server.
 
 ### macOS (Apple Silicon & Intel)
 1. Ensure Xcode Command Line Tools are installed:

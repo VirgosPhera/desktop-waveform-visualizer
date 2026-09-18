@@ -316,30 +316,26 @@ AppendMenuW(hMenu, MF_STRING, 104, L"Mode: My New Mode");
 3. Launch with `run.bat`.
 
 ### Linux (Ubuntu/Debian/Arch/Fedora)
-1. Install development dependencies:
+1. Install development dependencies (if not already installed):
    ```bash
    sudo apt update && sudo apt install -y cmake g++ libpulse-dev libcairo2-dev libx11-dev libxext-dev
    ```
-2. Build with CMake:
-   ```bash
-   cmake -B build -S . && cmake --build build -j$(nproc)
-   ```
-3. Run in background:
+2. Simply run the launcher:
    ```bash
    ./run.sh
    ```
+   *(On first run, `run.sh` automatically detects if the binary is missing, compiles it with CMake using all CPU cores, and launches AetherWave in the background. Subsequent runs start instantly!)*
 
 ### macOS (Apple Silicon & Intel)
 1. Ensure Xcode Command Line Tools are installed:
    ```bash
    xcode-select --install
    ```
-2. Build and create `.app` bundle:
+2. Simply run the launcher:
    ```bash
-   cmake -B build -S . && cmake --build build
-   ./bundle_macos.sh
+   ./run.sh
    ```
-3. Launch `build/AetherWave.app` or run `./run.sh`.
+   *(Auto-compiles and generates `build/AetherWave.app` on first run! You can also double-click `build/AetherWave.app` directly in Finder or run `./bundle_macos.sh`)*.
 
 ---
 

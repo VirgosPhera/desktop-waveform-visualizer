@@ -68,24 +68,18 @@ Looking to tweak, customize, mod, or extend AetherWave manually? Full developer 
 - **Recompile:** Run `build.bat` (uses MSVC C++20).
 
 #### 🐧 Linux (Ubuntu / Debian / Arch / Fedora)
+- **Start:** Just run `./run.sh`! *(Auto-compiles automatically on first run, then starts in background)*.
+- **Stop:** Run `./stop.sh`.
 - **Install Dependencies (Ubuntu/Debian):**
   ```bash
   sudo apt update && sudo apt install -y cmake g++ libpulse-dev libcairo2-dev libx11-dev libxext-dev
   ```
-- **Build:**
-  ```bash
-  cmake -B build -S . && cmake --build build -j$(nproc)
-  ```
-- **Start:** Run `./run.sh` (Stop via `./stop.sh`).
 - **1-Click Icon:** Copy `aetherwave.desktop` to `~/.local/share/applications/` or your Desktop.
 
 #### 🍏 macOS (Apple Silicon M1/M2/M3 & Intel)
-- **Build & Bundle:**
-  ```bash
-  cmake -B build -S . && cmake --build build
-  ./bundle_macos.sh
-  ```
-- **Start:** Double-click `build/AetherWave.app` in Finder, or run `./run.sh` (Stop via `./stop.sh`).
+- **Start:** Just run `./run.sh` or double-click `build/AetherWave.app`! *(Auto-compiles and creates .app bundle on first run)*.
+- **Stop:** Run `./stop.sh`.
+- **Create Standalone App Bundle:** Run `./bundle_macos.sh`.
 
 ### Configuration (`config/config.json`)
 
@@ -165,24 +159,18 @@ Looking to tweak, customize, mod, or extend AetherWave manually? Full developer 
 - **Compile Ulang:** Jalankan `build.bat` (menggunakan MSVC C++20).
 
 #### 🐧 Linux (Ubuntu / Debian / Arch / Fedora)
-- **Install Dependensi (Ubuntu/Debian):**
+- **Menjalankan:** Cukup jalankan `./run.sh`! *(Otomatis meng-compile pada run pertama jika binary belum ada, lalu langsung jalan di background)*.
+- **Menghentikan:** Jalankan `./stop.sh`.
+- **Install Dependensi (Ubuntu/Debian jika dibutuhkan):**
   ```bash
   sudo apt update && sudo apt install -y cmake g++ libpulse-dev libcairo2-dev libx11-dev libxext-dev
   ```
-- **Compile:**
-  ```bash
-  cmake -B build -S . && cmake --build build -j$(nproc)
-  ```
-- **Menjalankan:** Jalankan `./run.sh` (Matikan lewat `./stop.sh`).
 - **Shortcut 1-Klik:** Copy `aetherwave.desktop` ke `~/.local/share/applications/` atau taruh di Desktop.
 
 #### 🍏 macOS (Apple Silicon & Intel)
-- **Compile & Buat Bundle:**
-  ```bash
-  cmake -B build -S . && cmake --build build
-  ./bundle_macos.sh
-  ```
-- **Menjalankan:** Double-click `build/AetherWave.app` di Finder, atau jalankan `./run.sh` (Matikan lewat `./stop.sh`).
+- **Menjalankan:** Cukup jalankan `./run.sh` atau double-click `build/AetherWave.app`! *(Otomatis compile dan generate app bundle pada run pertama)*.
+- **Menghentikan:** Jalankan `./stop.sh`.
+- **Buat .app Bundle Terpisah:** Jalankan `./bundle_macos.sh`.
 
 ### Kustomisasi `config/config.json`
 

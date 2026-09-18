@@ -1,10 +1,19 @@
 #!/bin/bash
 # Builds a standalone macOS .app bundle
+# Creator: Amir (Only-One-Kind)
+
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 APP_DIR="$DIR/build/AetherWave.app"
 CONTENTS="$APP_DIR/Contents"
 MACOS="$CONTENTS/MacOS"
 RESOURCES="$CONTENTS/Resources"
+
+# Ensure binary is built first
+if [ ! -f "$DIR/build/AetherWave" ] && [ ! -f "$DIR/bin/AetherWave" ]; then
+    echo "[AetherWave] Compiling for macOS..."
+    CPU_CORES=$(sysctl -n hw.ncpu 2>/dev/null || echo 2)
+    cmake -B "$DIR/build" -S "$DIR" && cmake --build "$DIR/build" -j"$CPU_CORES"
+fi
 
 mkdir -p "$MACOS" "$RESOURCES"
 
@@ -13,6 +22,9 @@ if [ -f "$DIR/build/AetherWave" ]; then
     cp "$DIR/build/AetherWave" "$MACOS/AetherWave"
 elif [ -f "$DIR/bin/AetherWave" ]; then
     cp "$DIR/bin/AetherWave" "$MACOS/AetherWave"
+else
+    echo "[AetherWave ERROR] Binary not found to bundle."
+    exit 1
 fi
 
 # Create Info.plist

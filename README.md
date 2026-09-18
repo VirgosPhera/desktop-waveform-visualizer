@@ -63,7 +63,7 @@ Looking to tweak, customize, mod, or extend AetherWave manually? Full developer 
 ### How to Run
 
 #### 🪟 Windows (11 / 10)
-- **Start:** Double-click `run.bat` (or `bin\AetherWave.exe`).
+- **Start:** To **Bin** folder and Double-click `run.bat` (or `bin\AetherWave.exe`).
 - **Stop:** Double-click `stop.bat` or right-click the system tray icon -> "Exit AetherWave".
 - **Recompile:** Run `build.bat` (uses MSVC C++20).
 

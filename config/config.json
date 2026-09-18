@@ -1,0 +1,38 @@
+{
+  "window": {
+    "position": "bottom_screen",
+    "height_cm": 2.8,
+    "dock_above_taskbar": true,
+    "taskbar_margin_px": 3,
+    "fps_cap": 120,
+    "click_through": true
+  },
+  "audio": {
+    "sample_rate": 48000,
+    "fft_size": 1024,
+    "num_bands": 64,
+    "attack_time_ms": 12.0,
+    "decay_time_ms": 140.0,
+    "sensitivity_multiplier": 1.35
+  },
+  "visualizer": {
+    "mode": "waveform_curve",
+    "bar_spacing_px": 3.0,
+    "corner_radius_px": 2.5,
+    "peak_cap_enabled": true,
+    "line_thickness_px": 2.5,
+    "fill_under_wave": true,
+    "fill_opacity": 0.30
+  },
+  "color_mixer": {
+    "blend_mode": "frequency_split",
+    "color_palette": [
+      { "stop": 0.00, "hex": "#FF1A4B", "label": "Crimson Bass" },
+      { "stop": 0.30, "hex": "#FF5722", "label": "Orange Mid-Bass" },
+      { "stop": 0.65, "hex": "#8B5CF6", "label": "Electric Violet Mids" },
+      { "stop": 1.00, "hex": "#00A3FF", "label": "Azure Neon Treble" }
+    ],
+    "amplitude_glow_boost": 0.45,
+    "base_alpha": 0.95
+  }
+}

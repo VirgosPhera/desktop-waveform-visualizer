@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=AetherWave
+GenericName=Audio Visualizer
+Comment=Bottom-screen desktop audio visualizer
+Exec=bash -c "$(dirname %k)/run.sh"
+Icon=audio-card
+Terminal=false
+Categories=AudioVideo;Audio;
+StartupNotify=false

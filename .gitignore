@@ -1,0 +1,22 @@
+# Build and intermediate files
+build/
+*.obj
+*.ilk
+*.pdb
+*.exp
+*.lib
+
+# IDE & Editor files
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary lock files
+*.lock
